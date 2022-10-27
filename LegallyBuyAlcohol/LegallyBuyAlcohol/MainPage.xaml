@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LegallyBuyAlcohol.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="MediumPurple" Padding="24" CornerRadius="0" BorderColor="Black" Margin="40, 20, 40, 0">
+            <Label 
+                Text="Legal Drinking Age Calculator"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center" 
+                TextColor="White" 
+                FontSize="20"
+                />
+        </Frame>
+
+        
+        <Label 
+            Text="BIRTHDATE:" 
+            Margin="40, 20, 40, 0"
+            FontAttributes="Bold"
+            TextColor="Black"/>
+
+        <DatePicker x:Name="birthDay"
+            DateSelected="DatePicker_DateSelected"
+            
+            MinimumDate="October 1, 2001"
+            MaximumDate="December 25, 2022"
+            Format="MMMM dd, yyyy"  
+            TextColor="Gray" 
+            BackgroundColor="LightGoldenrodYellow" 
+            FontSize="15"
+            Margin="40, 0, 40, 30"
+            />
+
+        <Button
+            x:Name="Btn_ageTwentyOne"
+            Text="Click for Legal Date"
+            TextColor="White"
+            BackgroundColor="Black"
+            BorderColor="Purple"
+            BorderWidth="1"
+            Clicked="Btn_Clicked"
+            FontSize="12"
+            FontAttributes="Bold"
+            Margin="80, 0, 80, 40"
+            />
+
+
+        <Label 
+            Text= "You'll be of drinking age ..." 
+            x:Name="Lbl_Drink"
+            HorizontalTextAlignment="Center" 
+            FontSize="15" 
+            TextColor="Purple" 
+            Margin="40, 0, 40, 10" 
+            />
+        
+    </StackLayout>
+    
+    
+
+</ContentPage>
